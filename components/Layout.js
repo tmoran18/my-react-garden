@@ -17,6 +17,7 @@ export default function Layout({ children, pageTitle, ...props }) {
 			<footer>Built by me</footer>
 
 			<style jsx global>{`
+				@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 				@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;900&display=swap');
 				html,
 				body {

@@ -1,28 +1,33 @@
 import Link from 'next/link';
 
+import PostListCard from './PostListCard';
+
 export default function PostList({ posts }) {
 	if (posts === 'undefined') return null;
-
 
 	return (
 		<div>
 			{!posts && <div>No posts!</div>}
 			<ul>
 				{posts &&
-					posts.map((post) => {
+					posts.map((post, index) => {
 						return (
-							<li key={post.slug}>
-								<Link href={{ pathname: `/post/${post.slug}` }}>
-									<a>{post.frontmatter.title}</a>
-								</Link>
-							</li>
+							<Link key={index} href={{ pathname: `/post/${post.slug}` }}>
+								<a>
+									<PostListCard {...post.frontmatter} />
+								</a>
+							</Link>
 						);
 					})}
 			</ul>
+			<style jsx>{`
+				a {
+					text-decoration: none;
+				}
+			`}</style>
 		</div>
 	);
 }
-
 
 // Post needs to have:
 // Thumbnail, Date, Tag, title
