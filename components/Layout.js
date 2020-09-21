@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from './Header';
+import AvatarBlurb from './AvatarBlurb';
 
 export default function Layout({ children, pageTitle, ...props }) {
 	return (
@@ -10,6 +11,7 @@ export default function Layout({ children, pageTitle, ...props }) {
 			</Head>
 			<section className='layout'>
 				<Header />
+				<AvatarBlurb />
 				<div className='content'>{children}</div>
 			</section>
 			<footer>Built by me</footer>
@@ -33,6 +35,9 @@ export default function Layout({ children, pageTitle, ...props }) {
 				}
 			`}</style>
 			<style jsx>{`
+				.layout {
+					padding: 2rem;
+				}
 				.content {
 					display: flex;
 					flex-direction: column;
