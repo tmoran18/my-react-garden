@@ -3,6 +3,7 @@ import Link from 'next/link';
 export default function PostList({ posts }) {
 	if (posts === 'undefined') return null;
 
+
 	return (
 		<div>
 			{!posts && <div>No posts!</div>}
@@ -21,3 +22,7 @@ export default function PostList({ posts }) {
 		</div>
 	);
 }
+
+
+// Post needs to have:
+// Thumbnail, Date, Tag, title
