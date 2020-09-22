@@ -13,3 +13,12 @@ Humblebrag sartorial man braid ad vice, wolf ramps in cronut proident cold-press
 - Look at me
 - I am in a list
 - Woo hoo
+
+```jsx
+
+import React from "react";
+
+const CoolComponent = () => <div>I'm a cool component!!</div>;
+
+export default CoolComponent;
+```

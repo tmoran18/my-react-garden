@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import Header from './Header';
+import Prism from 'prismjs';
+import React, { useEffect } from 'react';
+import 'prismjs/components/prism-jsx.min';
 
 export default function Layout({ children, pageTitle, ...props }) {
+	useEffect(() => {
+		Prism.highlightAll();
+	}, []);
 	return (
 		<>
 			<Head>
@@ -13,7 +19,6 @@ export default function Layout({ children, pageTitle, ...props }) {
 				<div className='content'>{children}</div>
 			</section>
 			<footer>Built by me</footer>
-
 			<style jsx global>{`
 				@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 				@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;900&display=swap');

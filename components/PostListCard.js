@@ -1,14 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
-export default function PostListCard({
-	tag,
-	title,
-	datePub,
-	blurb,
-	color,
-	slug,
-}) {
+export default function PostListCard({ tag, title, datePub, blurb, color }) {
 	const [cardColor, setCardColor] = useState('');
 
 	const getCardColor = (color) => {

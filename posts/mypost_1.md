@@ -12,3 +12,22 @@ Humblebrag sartorial man braid ad vice, wolf ramps in cronut proident cold-press
 - Look at me
 - I am in a list
 - Woo hoo
+
+```jsx
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class Child extends Component {
+  const [cardColor, setCardColor] = useState('');
+  render() {
+    return (
+        <p className="App-intro">
+          I'm a childish component
+        </p>
+    );
+  }
+}
+
+export default Child;
+```

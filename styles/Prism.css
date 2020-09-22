@@ -1,0 +1,5 @@
+pre[class*='language-'] {
+	border-radius: 0.5rem;
+	background: #282c34;
+	box-shadow: 6px 10px 16px rgba(0, 0, 0, 0.15), 5px 6px 5px rgba(0, 0, 0, 0.15);
+}
