@@ -2,15 +2,22 @@ import matter from 'gray-matter';
 
 import Layout from '../components/Layout';
 import PostList from '../components/PostList';
+import AvatarBlurb from '../components/AvatarBlurb';
 
 const Index = ({ posts, title, description, ...props }) => {
 	return (
 		<Layout pageTitle={title}>
-			<h1 className='title'>Welcome to my blog!</h1>
-			<p className='description'>{description}</p>
 			<main>
+				<AvatarBlurb />
 				<PostList posts={posts} />
 			</main>
+			<style jsx>
+				{`
+					main {
+						max-width: 800px;
+					}
+				`}
+			</style>
 		</Layout>
 	);
 };

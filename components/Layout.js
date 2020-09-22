@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Header from './Header';
-import AvatarBlurb from './AvatarBlurb';
 
 export default function Layout({ children, pageTitle, ...props }) {
 	return (
@@ -11,7 +10,6 @@ export default function Layout({ children, pageTitle, ...props }) {
 			</Head>
 			<section className='layout'>
 				<Header />
-				<AvatarBlurb />
 				<div className='content'>{children}</div>
 			</section>
 			<footer>Built by me</footer>
@@ -31,8 +29,9 @@ export default function Layout({ children, pageTitle, ...props }) {
 				}
 				:root {
 					--text: #505050;
-					--primary: #80e5a6;
-					--secondary: #84d9ff;
+					--green: #80e5a6;
+					--blue: #84d9ff;
+					--red: #c62121;
 				}
 			`}</style>
 			<style jsx>{`
@@ -43,10 +42,17 @@ export default function Layout({ children, pageTitle, ...props }) {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+					justify-content: center;
 					max-width: 800px;
 					margin: auto;
-					padding: 20px;
+					padding: 2rem;
 					font-size: 2rem;
+				}
+				@media only screen and (max-width: 600px) {
+					.layout,
+					.content {
+						padding: 1rem;
+					}
 				}
 			`}</style>
 		</>

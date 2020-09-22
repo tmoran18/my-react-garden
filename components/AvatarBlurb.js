@@ -32,6 +32,9 @@ export default function AvatarBlurb() {
 					img {
 						width: 8rem;
 					}
+					p {
+						margin: 1rem 0 0 0;
+					}
 				}
 			`}</style>
 		</div>

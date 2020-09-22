@@ -24,10 +24,10 @@ export default function PostList({ posts }) {
 				a {
 					text-decoration: none;
 				}
+				ul {
+					padding: 0px;
+				}
 			`}</style>
 		</div>
 	);
 }
-
-// Post needs to have:
-// Thumbnail, Date, Tag, title

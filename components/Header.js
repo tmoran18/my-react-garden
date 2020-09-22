@@ -58,6 +58,9 @@ export default function Header() {
 					img {
 						width: 60vw;
 					}
+					nav {
+						flex-direction: column;
+					}
 				}
 			`}</style>
 		</>
