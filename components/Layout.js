@@ -18,16 +18,16 @@ export default function Layout({ children, pageTitle, ...props }) {
 			<section className='layout'>
 				<Header />
 				<div className='content'>{children}</div>
-				
+				<Footer />
 			</section>
-			<Footer />
+
 			<style jsx global>{`
 				@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 				@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;900&display=swap');
 				html,
 				body {
-					margin: 0;
-					padding: 0;
+					margin: 0px;
+					padding: 0px;
 					font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont,
 						'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue',
 						sans-serif;
@@ -43,21 +43,22 @@ export default function Layout({ children, pageTitle, ...props }) {
 			`}</style>
 			<style jsx>{`
 				.layout {
-					padding: 2rem;
-					display:flex;
-					flex-direction:column;
+					display: flex;
+					flex-direction: column;
+					position: relative;
+					min-height: 100vh;
+					padding-bottom: 50px;
 				}
 				.content {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					justify-content: center;
 					max-width: 800px;
 					margin: auto;
 					padding: 2rem;
 					font-size: 2rem;
-					min-height:100%;
-					flex-grow:1;
+					min-height: 100%;
+					flex-grow: 1;
 				}
 				@media only screen and (max-width: 600px) {
 					.layout,
