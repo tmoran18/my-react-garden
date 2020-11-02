@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 export default function PostListCard({ tag, title, datePub, blurb, color }) {
@@ -11,6 +10,8 @@ export default function PostListCard({ tag, title, datePub, blurb, color }) {
 			setCardColor('var(--green);');
 		} else if (color == 'red') {
 			setCardColor('var(--red);');
+		} else if (color == 'yellow') {
+			setCardColor('var(--yellow)');
 		} else {
 			setCardColor('var(--green);');
 		}
@@ -52,7 +53,8 @@ export default function PostListCard({ tag, title, datePub, blurb, color }) {
 					background-color: ${cardColor};
 				}
 				.date_published {
-					font-size: 1.2rem;
+					font-size: 1.4rem;
+					color: #333;
 				}
 				.blurb {
 					line-height: 1.5;
